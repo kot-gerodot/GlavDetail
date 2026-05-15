@@ -1,0 +1,592 @@
+
+@font-face {
+  font-family: 'Inter';
+  src: url('/fonts/Inter/Inter-Italic-VariableFont_opsz\,wght.ttf') format('truetype-variations');
+  font-weight: 100 900;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Inter';
+  src: url('/fonts/Inter/Inter-VariableFont_opsz\,wght.ttf') format('truetype-variations');
+  font-weight: 100 900;
+  font-style: normal;
+}
+* {
+  list-style-type: none;
+}
+body {
+  margin: 0;
+  background-color: rgba(248, 250, 252, 1);
+;
+  display: grid;
+}
+#desktop-version{
+    margin: 0;
+  background-color: rgba(248, 250, 252, 1);
+;
+  display: grid;
+}
+h1{
+font-family: 'Inter';
+font-weight: 800;
+font-size: 48px;
+letter-spacing: -0.96px;
+vertical-align: middle;
+
+}
+h2{
+font-family: 'Inter';
+font-weight: 400;
+font-size: 18px;
+letter-spacing: -0.9px;
+vertical-align: middle;
+
+
+}
+h3{
+font-family: 'Inter';
+font-weight: 700;
+font-size: 14px;
+letter-spacing: 0.35px;
+vertical-align: middle;
+
+}
+h4{
+font-family: 'Inter';
+font-weight: 500;
+font-size: 14px;
+letter-spacing: 0px;
+vertical-align: middle;
+
+
+}
+h5{
+    font-family: 'Inter';
+font-weight: 400;
+font-size: 10px;
+letter-spacing: -0.5px;
+vertical-align: middle;
+
+
+}
+h6{
+    font-family:'Inter';
+font-weight: 400;
+font-size: 16px;
+letter-spacing: 0px;
+vertical-align: middle;
+color: rgba(64, 71, 84, 1);
+
+
+}
+
+/*header.......*/
+header{
+    display: flex;
+    height: 951px;
+    flex-direction: column;
+}
+main {
+  margin: auto;
+  width: 100%;
+}
+header nav {
+    margin: 0;
+    display: flex;
+    height: 81px;
+    justify-content: space-between;
+    align-items: center;
+    background-color:#ffffff;
+}
+header nav button{
+    margin: 30px;
+    width: 232px;
+height: 44px;
+border-radius: 8px;
+background: #FB2C1A;
+border: 0;
+
+}
+header nav button h3{
+    color: #ffffff;
+
+
+}
+header main {
+    display: flex;
+     justify-content: space-around;
+margin: 0;
+height: 870px;
+    align-items: center;
+    background: linear-gradient(90deg, #1A1C1E 0%, rgba(26, 28, 30, 0.8) 50%, rgba(26, 28, 30, 0) 100%),
+url(./image/header-back.png)center no-repeat;
+    background-size: cover;
+    overflow: hidden;
+
+}
+#seasonal-sale{
+    width: 568px;
+height: 336px;
+ display: flex;
+    flex-direction: column;
+}
+#seasonal-sale div{
+    width: 262px;
+height: 28px;
+    background: #FB2C1A;
+border-radius: 9999px;
+display: flex;
+align-items: center;
+justify-content: center;
+
+}
+
+#seasonal-sale div h4{
+    color:#ffffff;
+}
+#seasonal-sale  h2{
+  color: rgba(203, 213, 225, 1);
+line-height: 28.8px;
+margin: 0 0px 25px 0px;
+
+}
+#seasonal-sale button{
+   background: rgba(0, 136, 255, 1);
+ display: flex;
+    width: 262px;
+border-radius: 8px;
+align-items: center;
+justify-content: center;
+height: 64px;
+padding: 15px;
+
+}
+#seasonal-sale button h3{
+    color:#ffffff;
+font-weight: 400;
+font-size: 16px;
+text-transform: uppercase;
+
+}
+
+#seasonal-sale h1{
+    color:#ffffff
+}
+
+
+#input-panel{
+     display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    position: relative;
+width: 364px;
+height: 414px;
+background:rgba(248, 250, 252, 1);
+;
+border-radius: 12px;
+padding: 42px;
+
+}
+#benefit-bar{
+    position: absolute;
+    width: 128px;
+    height: 36px;
+    border-radius: 8px;
+    background: #FB2C1A;
+    border: 0;
+    display: flex;
+    align-items: center;
+justify-content: center;
+top: -17px;
+    right: -13px;
+
+}
+#benefit-bar h3{
+margin: 0;
+color:#ffffff
+
+}
+
+#input-panel h2{
+    font-family: 'Inter';
+font-weight: 700;
+font-style: Bold;
+font-size: 24px;
+line-height: 33.6px;
+letter-spacing: 0px;
+vertical-align: middle;
+margin: 0;
+
+}
+#input-panel h4{
+    margin: 0;
+    color: rgba(64, 71, 84, 1);
+
+}
+#input-panel h5{
+    margin: 5px;
+    color: rgba(64, 71, 84, 1);
+
+}
+#input-panel form{
+    text-align:left;
+}
+
+#input-panel input{
+    width: 364px;
+height: 57px;
+border-radius: 8px;
+border-width: 1px;
+border: 1px solid rgba(192, 198, 214, 1);
+font-family: 'Inter';
+font-weight: 500;
+font-size: 16px;
+line-height: 100%;
+letter-spacing: 0px;
+vertical-align: middle;
+padding: 20px;
+}
+#input-panel input::placeholder {
+       color: rgba(107, 114, 128, 1);
+    
+      }
+#input-panel button{
+    width: 364px;
+height: 60px;
+border-radius: 8px;
+background: #FB2C1A;
+border: 0;
+color:#ffffff;
+}
+#input-panel div{
+  text-align:center;
+}
+/*component-catalog.......*/
+#component-catalog{
+    display: flex;
+    flex-direction: column;
+        margin: 100px auto;
+}
+#catalog-header{
+     display: flex;
+    flex-direction: column;
+ padding: 0 20px;
+border-left: 4px solid rgba(0, 136, 255, 1);
+}
+#catalog-header h1{
+    margin: 0;
+
+}
+#catalog-header h6{
+    margin: 0;
+
+}
+#grid-container{
+    margin: 50px 0 0 0;
+    display: grid;
+    grid-template-columns:278px 278px 278px 278px;
+    grid-template-rows:192px 192px;
+     row-gap:24px;
+    column-gap: 24px;
+}
+#grid-container div{
+    position: relative;
+    background-color: rgb(255, 255, 255);
+    border-radius: 12px;
+     padding: 32px;
+    border-width: 1px;
+    border: 1px solid rgba(192, 198, 214, 1);
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+#grid-container div h5{
+    position: absolute;
+   top: 20px;
+    right: 20px;
+    color: rgba(148, 163, 184, 1);
+
+
+}
+#grid-container div img{
+     width: 33px;
+height: 33px;
+}
+/*information-block.......*/
+#information-block{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    margin: 96px auto;
+}
+#information-block article{
+    display: flex;
+    width: 293px;
+height: 420px;
+padding: 40px;
+border-radius: 16px;
+    background-size: cover;
+    overflow: hidden;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+#oil-background{
+background: linear-gradient(0deg, rgba(26, 28, 30, 0.9) 0%, rgba(26, 28, 30, 0.2) 50%, rgba(26, 28, 30, 0) 100%), url(./image/oil-mobile.png)center no-repeat;
+}
+#tire-background{
+    background:linear-gradient(0deg, rgba(26, 28, 30, 0.9) 0%, rgba(26, 28, 30, 0.2) 50%, rgba(26, 28, 30, 0) 100%), url(./image/tire.png)center no-repeat;
+
+}
+#candles-background{
+background:linear-gradient(0deg, rgba(26, 28, 30, 0.9) 0%, rgba(26, 28, 30, 0.2) 50%, rgba(26, 28, 30, 0) 100%), url(./image/candles.png)center no-repeat;
+}
+
+.information h6{
+    color: rgba(203, 213, 225, 1);
+    margin: 35px 0;
+line-height: 24px;
+
+
+}
+.information-header h6{
+    color: rgb(255, 255, 255);
+    margin: 0;
+
+}
+#information-block article button{
+    display: flex;
+    width: 165px;
+height: 48px;
+border-radius: 8px;
+justify-content: center;
+align-items: center;
+background: rgba(255, 255, 255, 1);
+margin: 0;
+    border:0;
+}
+#information-block article button h6{
+    color: rgba(26, 28, 30, 1);
+
+}
+/*large-input-panel......*/
+#large-input-panel{
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+height: 422px;
+background:#ffffff;
+
+
+}
+#large-input-panel article{
+    display: flex;
+    width: 1088px;
+height: 132px;
+border-radius: 16px;
+padding: 48px;
+border: 1px solid rgba(192, 198, 214, 0.3);
+background: rgba(243, 243, 246, 1);
+justify-content: space-between;
+align-items: center;
+
+}
+#text-block-input-panel{
+display: flex;
+flex-direction: column;
+}
+#text-block-input-panel h1{
+    margin: 0;
+    font-family: 'Inter';
+font-weight: 700;
+font-size: 32px;
+line-height: 41.6px;
+letter-spacing: -1.6px;
+vertical-align: middle;
+text-transform: uppercase;
+
+
+}
+#text-block-input-panel h4{
+    color: rgba(64, 71, 84, 1);
+
+
+}
+#large-input-block{
+display: flex;
+align-items: flex-end;
+width: 692px;
+height: 90px;
+justify-content: space-between;
+}
+#large-input-block form{
+    margin: 0;
+}
+#large-input-block form h5{
+font-weight: 700;
+color: rgba(100, 116, 139, 1);
+
+}
+#large-input-block form input {
+width: 155px;
+height: 50px;
+border-width: 1px, 1px, 2px, 1px;
+border-style: solid;
+border-color: rgba(203, 213, 225, 1);
+padding: 20px;
+font-weight: 500;
+font-size: 16px;
+color: rgba(100, 116, 139, 1);
+}
+#large-input-block form input::placeholder {
+       color: rgba(107, 114, 128, 1);
+    
+      }
+
+#large-input-block button{
+     display: flex;
+    width: 155px;
+    height: 48px;
+    border-radius: 8px;
+    background: rgba(0, 136, 255, 1);
+ align-items: center;
+ justify-content: center;
+ border:0;
+ color: rgb(255, 255, 255);
+}
+#large-input-block button h2{
+    font-weight: 400;
+font-size: 12px;
+letter-spacing: 1.2px;
+text-align: center;
+vertical-align: middle;
+}
+/*footer.........*/
+footer{
+background: rgba(15, 23, 42, 1);
+display: flex;
+flex-direction: column;
+height: 504px;
+
+}
+#footer-information{
+display: flex;
+height: 360px;
+justify-content: space-between;
+}
+
+#footer-information article{
+    display: flex;
+    flex-direction: column;
+
+     
+}
+#main-detail{
+    margin: 80px 0 0 40px;
+}
+
+#main-detail h1{
+color:rgba(255, 255, 255, 1);
+margin: 0;
+font-weight: 900;
+font-size: 30px;
+line-height: 32px;
+letter-spacing: 1px;
+vertical-align: middle;
+text-transform: uppercase;
+
+}
+#main-detail h4{
+    color: rgba(148, 163, 184, 1);
+    font-weight: 400;
+    letter-spacing: 1px;
+     margin: 35px 0;
+     line-height: 20px;
+
+
+}
+
+#information-about-site{
+      margin: 80px 0 0 0;
+}
+#information-about-site h2{
+    margin: 0;
+    color:rgba(0, 136, 255, 1);
+}
+#information-about-site ul{
+    margin: 0;
+    padding: 0;
+}
+#information-about-site a{
+    text-decoration:none;
+}
+
+#information-about-site h6{
+    font-size: 14px;
+    color:rgba(203, 213, 225, 1);
+}
+
+#contacts{
+        margin: 80px 40px 0 0;
+        width: 362px;
+
+
+}
+#contacts h2{
+    margin: 0;
+    color:rgba(251, 44, 26, 1);
+
+
+}
+#contacts h3{
+    color : rgba(255, 255, 255, 1);
+    font-size: 18px;
+
+}
+#contacts h3::before{
+ content: "";
+ width: 18px;
+height: 18px;
+background:  url(./image/phone.svg)center no-repeat;
+display: inline-block;
+margin-right: 15px;
+
+}
+#contacts h5 {
+    color: rgba(100, 116, 139, 1);
+    margin-left: 35px;
+}
+
+
+#contacts h6 {
+    color: rgba(203, 213, 225, 1);
+font-size: 14px;
+ 
+}
+#contacts h6::before{
+     display: inline-block;
+    content: "";
+    background: url(./image/mark.svg)center no-repeat;
+    width: 16px;
+height: 20px;
+margin-right: 15px;
+}
+
+#footer-rights{
+display: flex;
+flex-direction: column;
+}
+#footer-rights h4{
+    color: rgba(100, 116, 139, 1);
+    margin: 40px;
+font-weight: 400;
+font-size: 14px;
+letter-spacing: 1px;
+}
+
+
+
+
+
+
+
+
