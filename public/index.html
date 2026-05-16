@@ -1,0 +1,419 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="ГлавДеталь — оригинальные запчасти для автомобилей. Подбор по VIN, сезонные распродажи, доставка по РФ."
+    />
+    <title>ГлавДеталь — Оригинальные автозапчасти</title>
+    <link rel="stylesheet" href="/main.css" />
+    <link rel="stylesheet" href="/adaptive.css" />
+    <link rel="icon" href="/image/badge.svg" />
+  </head>
+  <body>
+    <div id="desktop-version">
+      <header>
+        <nav>
+          <figure>
+            <img src="/image/logo.svg" alt="ГлавДеталь" />
+          </figure>
+          <button
+            type="button"
+            onclick="document.getElementById('input-panel').scrollIntoView({ behavior: 'smooth' })"
+          >
+            <span class="btn-label">ОФОРМИТЬ ЗАКАЗ</span>
+          </button>
+        </nav>
+      </header>
+
+      <div id="hero">
+        <div class="container header-content">
+          <article id="seasonal-sale">
+            <div>
+              <span class="badge">ОГРАНИЧЕННОЕ ПРЕДЛОЖЕНИЕ</span>
+            </div>
+            <h1 class="h1">Сезонная Распродажа</h1>
+            <p class="hero-desc">
+              Оригинальные запчасти со скидкой 15%. Высокоточные компоненты для максимальной
+              надежности и пиковой производительности вашего автомобиля.
+            </p>
+            <button
+              type="button"
+              onclick="
+                document.getElementById('component-catalog').scrollIntoView({ behavior: 'smooth' })
+              "
+            >
+              <span class="btn-label">ПЕРЕЙТИ В КАТАЛОГ</span>
+            </button>
+          </article>
+          <article id="input-panel">
+            <span id="benefit-bar" class="h3">ВЫГОДА 10%</span>
+            <h2 class="h2">Подбор запчастей по VIN</h2>
+            <p class="panel-desc">
+              Получите бесплатный экспертный подбор и скидку 10% на первый заказ прямо сейчас!
+            </p>
+            <form class="lead-form" data-source="header">
+              <label for="vin_or_model">
+                <span>МОДЕЛЬ АВТО ИЛИ VIN-КОД</span>
+                <input
+                  type="text"
+                  name="vin_or_model"
+                  id="vin_or_model"
+                  placeholder="Введите данные автомобиля"
+                />
+              </label>
+              <label for="phone">
+                <span>НОМЕР ТЕЛЕФОНА</span>
+                <input
+                  type="tel"
+                  name="phone"
+                  id="phone"
+                  placeholder="+7 (___) ___ __ __"
+                  required
+                />
+              </label>
+              <button type="submit">
+                <span class="btn-label">ПОЛУЧИТЬ ПОДБОР И СКИДКУ</span>
+              </button>
+              <span class="form-agreement"
+                >НАЖИМАЯ КНОПКУ, ВЫ СОГЛАШАЕТЕСЬ С ПОЛИТИКОЙ КОНФИДЕНЦИАЛЬНОСТИ И УСЛОВИЯМИ
+                ОБРАБОТКИ ДАННЫХ.</span
+              >
+            </form>
+          </article>
+        </div>
+      </div>
+
+      <main>
+        <section id="component-catalog" class="container">
+          <article id="catalog-header">
+            <h2 class="h1">КАТАЛОГ КОМПОНЕНТОВ</h2>
+            <p class="h6">Инженерные решения для каждой системы вашего автомобиля.</p>
+          </article>
+          <article>
+            <div id="grid-container">
+              <div class="item">
+                <img src="/image/Icon1.svg" alt="" />
+                <span class="card-count">12,450 ТОВАРОВ</span>
+                <h3 class="card-title">ОРИГИНАЛЬНЫЕ ЗАПЧАСТИ</h3>
+              </div>
+              <div class="item">
+                <img src="/image/Icon2.svg" alt="" />
+                <span class="card-count">45,000 ТОВАРОВ</span>
+                <h3 class="card-title">АНАЛОГИ (OEM)</h3>
+              </div>
+              <div class="item">
+                <img src="/image/Icon3.svg" alt="" />
+                <span class="card-count">8,900 ТОВАРОВ</span>
+                <h3 class="card-title">ВАЗ/ГАЗ/КАМАЗ</h3>
+              </div>
+              <div class="item">
+                <img src="/image/Icon4.svg" alt="" />
+                <span class="card-count">3,200 ТОВАРОВ</span>
+                <h3 class="card-title">КУЗОВНЫЕ ДЕТАЛИ</h3>
+              </div>
+              <div class="item">
+                <img src="/image/Icon5.svg" alt="" />
+                <span class="card-count">1,150 ТОВАРОВ</span>
+                <h3 class="card-title">АВТОСТЕКЛА</h3>
+              </div>
+              <div class="item">
+                <img src="/image/Icon6.svg" alt="" />
+                <span class="card-count">6,700 ТОВАРОВ</span>
+                <h3 class="card-title">РАСХОДНИКИ ДЛЯ ТО</h3>
+              </div>
+              <div class="item">
+                <img src="/image/Icon7.svg" alt="" />
+                <span class="card-count">2,400 ТОВАРОВ</span>
+                <h3 class="card-title">АВТОХИМИЯ И МАСЛА</h3>
+              </div>
+              <div class="item">
+                <img src="/image/Icon8.svg" alt="" />
+                <span class="card-count">5,300 ТОВАРОВ</span>
+                <h3 class="card-title">АКСЕССУАРЫ</h3>
+              </div>
+            </div>
+          </article>
+        </section>
+
+        <section id="information-block" class="container">
+          <article id="oil-background">
+            <div class="information-header"><h3>Масла Genesis</h3></div>
+            <div class="information">
+              <p>Премиальная смазка для экстремальных нагрузок и долголетия двигателя.</p>
+            </div>
+            <button><span class="btn-label">ПОДРОБНЕЕ</span></button>
+          </article>
+          <article id="tire-background">
+            <div class="information-header"><h3>Зимние Шины</h3></div>
+            <div class="information">
+              <p>Бескомпромиссное сцепление в самых суровых условиях. Безопасность на скорости.</p>
+            </div>
+            <button><span class="btn-label">ПОДРОБНЕЕ</span></button>
+          </article>
+          <article id="candles-background">
+            <div class="information-header"><h3>Запчасти ТО</h3></div>
+            <div class="information">
+              <p>Готовые комплекты для регламентного обслуживания вашего авто.</p>
+            </div>
+            <button><span class="btn-label">ПОДРОБНЕЕ</span></button>
+          </article>
+        </section>
+
+        <section id="large-input-panel">
+          <article>
+            <div id="text-block-input-panel">
+              <h2 class="h1-compact">ЗАПРОС НА ПОДБОР</h2>
+              <p class="input-desc">
+                Получите профессиональный подбор запчастей по
+                <span style="font-weight: 700">VIN и скидку 10%</span> на заказ в течение 15 минут.
+              </p>
+            </div>
+            <form class="lead-form" data-source="large" id="large-input-block">
+              <label for="large-name">
+                <span>ВАШЕ ИМЯ</span>
+                <input type="text" name="name" id="large-name" placeholder="Александр" />
+              </label>
+              <label for="large-phone">
+                <span>НОМЕР ТЕЛЕФОНА</span>
+                <input
+                  type="tel"
+                  name="phone"
+                  id="large-phone"
+                  placeholder="+7 (___) ___ __ __"
+                  required
+                />
+              </label>
+              <label for="large-vin">
+                <span>VIN ИЛИ МОДЕЛЬ</span>
+                <input type="text" name="vin_or_model" id="large-vin" placeholder="BMW M5 F90" />
+              </label>
+              <button type="submit"><span class="btn-label">ПОЛУЧИТЬ СКИДКУ</span></button>
+            </form>
+          </article>
+        </section>
+      </main>
+
+      <footer>
+        <div class="container">
+          <section id="footer-information">
+            <article id="main-detail">
+              <h2 class="brand-name">ГЛАВ ДЕТАЛЬ</h2>
+              <p class="brand-desc">Премиальные автозапчасти для профессионалов и энтузиастов.</p>
+            </article>
+            <article id="information-about-site">
+              <h2 class="info-title">ИНФОРМАЦИЯ</h2>
+              <ul>
+                <li>
+                  <a href="#"><span class="footer-link">ПОЛИТИКА КОНФИДЕНЦИАЛЬНОСТИ</span></a>
+                </li>
+                <li>
+                  <a href="#"><span class="footer-link">УСЛОВИЯ СЕРВИСА</span></a>
+                </li>
+                <li>
+                  <a href="#"><span class="footer-link">ДОСТАВКА</span></a>
+                </li>
+                <li>
+                  <a href="#"><span class="footer-link">ВОЗВРАТ</span></a>
+                </li>
+              </ul>
+            </article>
+            <article id="contacts">
+              <h2 class="contacts-title">КОНТАКТ-ЦЕНТР</h2>
+              <div id="phone-number">
+                <a class="phone" href="tel:+79153677402">+7 (915) 367-74-02</a>
+                <span class="hours">ПН-ВС: 09:00 - 21:00</span>
+              </div>
+              <div id="office-location">
+                <address>Пристанционная вл6, Ступино, РФ</address>
+              </div>
+            </article>
+          </section>
+          <section id="footer-rights">
+            <small class="copyright">© 2025 Глав Деталь. Все права защищены.</small>
+          </section>
+        </div>
+      </footer>
+    </div>
+
+    <div id="mobile-version">
+      <header>
+        <nav>
+          <figure>
+            <img src="/image/logo.svg" alt="ГлавДеталь" />
+          </figure>
+        </nav>
+      </header>
+
+      <main>
+        <section id="seasonal-sale-mobile">
+          <div><span class="badge">СЕЗОННАЯ АКЦИЯ</span></div>
+          <h1 class="h1">Сезонная<br />распродажа</h1>
+          <p class="hero-desc">
+            Оригинальные запчасти со скидкой 15% для всех зарегистрированных пользователей в этом
+            месяце.
+          </p>
+          <button
+            type="button"
+            onclick="
+              document.getElementById('input-panel-mobile').scrollIntoView({ behavior: 'smooth' })
+            "
+          >
+            <span class="btn-label">Получить подбор и скидку</span>
+          </button>
+        </section>
+      </main>
+
+      <div id="container">
+        <section id="input-panel-mobile">
+          <div id="expert-help-mobile">
+            <h2 class="h2">Помощь эксперта</h2>
+            <p class="expert-desc">Получите бесплатную консультацию и скидку 5% на первый заказ</p>
+          </div>
+          <form class="lead-form" data-source="mobile">
+            <label for="mobile-vin">
+              <span>VIN-НОМЕР АВТОМОБИЛЯ</span>
+              <input type="text" name="vin_or_model" id="mobile-vin" placeholder="Введите VIN" />
+            </label>
+            <label for="mobile-phone">
+              <span>НОМЕР ТЕЛЕФОНА</span>
+              <input
+                type="tel"
+                name="phone"
+                id="mobile-phone"
+                placeholder="+7 (___) ___-__-__"
+                required
+              />
+            </label>
+            <div id="input-button-mobile">
+              <button type="submit"><span class="btn-label">ПОЛУЧИТЬ СКИДКУ</span></button>
+              <span class="form-agreement"
+                >Нажимая кнопку, вы соглашаетесь с обработкой персональных данных</span
+              >
+            </div>
+          </form>
+        </section>
+
+        <section id="component-catalog-mobile">
+          <h2 class="h1">Каталог</h2>
+          <div id="grid-container-mobile">
+            <div>
+              <img src="/image/Icon-mobile1.svg" alt="" />
+              <span class="card-label">ДВИГАТЕЛЬ</span>
+            </div>
+            <div>
+              <img src="/image/Icon-mobile2.svg" alt="" />
+              <span class="card-label">ХОДОВАЯ</span>
+            </div>
+            <div>
+              <img src="/image/Icon-mobile3.svg" alt="" />
+              <span class="card-label">ЭЛЕКТРОНИКА</span>
+            </div>
+            <div>
+              <img src="/image/Icon-mobile4.svg" alt="" />
+              <span class="card-label">МАСЛА И ЖИДКОСТИ</span>
+            </div>
+          </div>
+        </section>
+
+        <section id="information-block-mobile">
+          <article id="oil-mobile">
+            <div class="information-header"><h3>Масла Genesis</h3></div>
+            <div class="information"><p class="info-desc">Максимальная защита двигателя</p></div>
+            <button id="buy-button"><span class="btn-label">КУПИТЬ</span></button>
+          </article>
+          <article id="tire-mobile">
+            <div class="information-header"><h3>Зимние Шины</h3></div>
+            <div class="information"><p class="info-desc">Сцепление в любых условиях</p></div>
+            <button id="study-button"><span class="btn-label">ИЗУЧИТЬ</span></button>
+          </article>
+          <article id="candles-mobile">
+            <div class="information-header"><h3>Запчасти для ТО</h3></div>
+            <div class="information"><p class="info-desc">Готовые комплекты</p></div>
+            <button id="list-button"><span class="btn-label">СПИСОК</span></button>
+          </article>
+        </section>
+      </div>
+
+      <footer id="footer-mobile">
+        <section id="footer-information-mobile">
+          <article id="main-detail-mobile">
+            <h2 class="brand-name">ГЛАВ ДЕТАЛЬ</h2>
+            <p class="brand-desc">
+              Создано для производительности. Ваш надежный партнер в обслуживании автомобилей.
+            </p>
+          </article>
+          <article id="contacts-mobile">
+            <div>
+              <a class="phone" href="tel:+79153677402">+7 (915) 367-74-02</a>
+            </div>
+            <div>
+              <a class="phone" href="tel:+79153685480">+7 (915) 368-54-80</a>
+              <span class="hours">ПН-ВС: 09:00 - 21:00</span>
+            </div>
+          </article>
+          <article id="information-about-site-mobile">
+            <ul>
+              <li>
+                <a href="#"><span class="footer-link">ПОЛИТИКА КОНФИДЕНЦИАЛЬНОСТИ</span></a>
+              </li>
+              <li>
+                <a href="#"><span class="footer-link">УСЛОВИЯ СЕРВИСА</span></a>
+              </li>
+              <li>
+                <a href="#"><span class="footer-link">ДОСТАВКА</span></a>
+              </li>
+              <li>
+                <a href="#"><span class="footer-link">ВОЗВРАТ</span></a>
+              </li>
+            </ul>
+          </article>
+        </section>
+        <section id="footer-rights-mobile">
+          <small class="copyright">© 2025 ГлавДеталь.</small>
+        </section>
+      </footer>
+    </div>
+
+    <script>
+      document.querySelectorAll('.lead-form').forEach((form) => {
+        form.addEventListener('submit', async (e) => {
+          e.preventDefault();
+          const btn = form.querySelector('button[type="submit"]');
+          const originalText = btn.textContent;
+          btn.disabled = true;
+          btn.textContent = 'Отправка...';
+
+          const data = {
+            name: (form.querySelector('[name="name"]')?.value || '').trim(),
+            phone: (form.querySelector('[name="phone"]')?.value || '').trim(),
+            vin_or_model: (form.querySelector('[name="vin_or_model"]')?.value || '').trim(),
+            source: form.dataset.source,
+          };
+
+          try {
+            const res = await fetch('/api/lead', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify(data),
+            });
+            if (res.ok) {
+              form.innerHTML =
+                '<div style="text-align:center;padding:20px"><h3 style="color:#16a34a;">Спасибо! Мы свяжемся с вами в ближайшее время.</h3></div>';
+            } else {
+              const err = await res.json();
+              alert(err.error || 'Ошибка отправки');
+            }
+          } catch {
+            alert('Ошибка сети. Попробуйте позже.');
+          } finally {
+            btn.disabled = false;
+            btn.textContent = originalText;
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

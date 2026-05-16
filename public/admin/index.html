@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Админка — ГлавДеталь</title>
+    <style>
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        font-family:
+          'Inter',
+          -apple-system,
+          sans-serif;
+        background: #f1f5f9;
+        color: #1e293b;
+      }
+      .header {
+        background: #0f172a;
+        color: #fff;
+        padding: 20px 40px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .header h1 {
+        margin: 0;
+        font-size: 20px;
+        font-weight: 700;
+      }
+      .header a {
+        color: #94a3b8;
+        text-decoration: none;
+        font-size: 14px;
+      }
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 24px;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        background: #fff;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+      }
+      th,
+      td {
+        padding: 12px 16px;
+        text-align: left;
+        font-size: 14px;
+      }
+      th {
+        background: #f8fafc;
+        font-weight: 600;
+        color: #475569;
+        border-bottom: 2px solid #e2e8f0;
+        white-space: nowrap;
+      }
+      td {
+        border-bottom: 1px solid #f1f5f9;
+      }
+      tr:hover td {
+        background: #f8fafc;
+      }
+      .badge {
+        display: inline-block;
+        padding: 2px 10px;
+        border-radius: 999px;
+        font-size: 12px;
+        font-weight: 600;
+      }
+      .badge-header {
+        background: #dbeafe;
+        color: #1d4ed8;
+      }
+      .badge-large {
+        background: #dcfce7;
+        color: #15803d;
+      }
+      .badge-mobile {
+        background: #fef3c7;
+        color: #b45309;
+      }
+      .btn-del {
+        background: none;
+        border: 1px solid #fecaca;
+        color: #dc2626;
+        padding: 4px 12px;
+        border-radius: 6px;
+        cursor: pointer;
+        font-size: 13px;
+      }
+      .btn-del:hover {
+        background: #fef2f2;
+      }
+      .empty {
+        text-align: center;
+        padding: 60px 20px;
+        color: #94a3b8;
+      }
+      .toast {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background: #16a34a;
+        color: #fff;
+        padding: 12px 24px;
+        border-radius: 8px;
+        font-size: 14px;
+        z-index: 999;
+      }
+      .stats {
+        display: flex;
+        gap: 16px;
+        margin-bottom: 24px;
+      }
+      .stat-card {
+        background: #fff;
+        border-radius: 10px;
+        padding: 16px 24px;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        flex: 1;
+      }
+      .stat-card h3 {
+        margin: 0;
+        font-size: 28px;
+        font-weight: 700;
+      }
+      .stat-card p {
+        margin: 4px 0 0;
+        font-size: 13px;
+        color: #64748b;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <h1>ГлавДеталь — Анкеты</h1>
+      <a href="/">← На сайт</a>
+    </div>
+    <div class="container">
+      <div class="stats">
+        <div class="stat-card">
+          <h3 id="total-count">0</h3>
+          <p>Всего анкет</p>
+        </div>
+        <div class="stat-card">
+          <h3 id="today-count">0</h3>
+          <p>За сегодня</p>
+        </div>
+      </div>
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Имя</th>
+            <th>Телефон</th>
+            <th>VIN / Модель</th>
+            <th>Источник</th>
+            <th>Дата</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody id="leads-tbody">
+          <tr>
+            <td colspan="7" class="empty">Загрузка...</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <script>
+      const tbody = document.getElementById('leads-tbody');
+
+      function badge(source) {
+        const cls =
+          source === 'header'
+            ? 'badge-header'
+            : source === 'large'
+              ? 'badge-large'
+              : 'badge-mobile';
+        const label = source === 'header' ? 'Хедер' : source === 'large' ? 'Баннер' : 'Мобильная';
+        return `<span class="badge ${cls}">${label}</span>`;
+      }
+
+      function formatDate(dateStr) {
+        const d = new Date(dateStr + 'Z');
+        return d.toLocaleString('ru-RU');
+      }
+
+      async function load() {
+        try {
+          const res = await fetch('/api/leads');
+          if (res.status === 401) {
+            tbody.innerHTML =
+              '<tr><td colspan="7" class="empty">Требуется авторизация. Обновите страницу и введите логин/пароль.</td></tr>';
+            return;
+          }
+          const leads = await res.json();
+          document.getElementById('total-count').textContent = leads.length;
+
+          const today = new Date().toISOString().slice(0, 10);
+          const todayLeads = leads.filter(
+            (l) => l.created_at && l.created_at.slice(0, 10) === today,
+          );
+          document.getElementById('today-count').textContent = todayLeads.length;
+
+          if (!leads.length) {
+            tbody.innerHTML =
+              '<tr><td colspan="7" class="empty">Пока нет ни одной анкеты</td></tr>';
+            return;
+          }
+
+          tbody.innerHTML = leads
+            .map(
+              (l) => `
+          <tr>
+            <td>${l.id}</td>
+            <td>${l.name || '—'}</td>
+            <td><strong>${l.phone}</strong></td>
+            <td>${l.vin_or_model || '—'}</td>
+            <td>${badge(l.source)}</td>
+            <td>${formatDate(l.created_at)}</td>
+            <td><button class="btn-del" onclick="remove(${l.id})">Удалить</button></td>
+          </tr>
+        `,
+            )
+            .join('');
+        } catch (err) {
+          tbody.innerHTML = `<tr><td colspan="7" class="empty">Ошибка загрузки: ${err.message}</td></tr>`;
+        }
+      }
+
+      async function remove(id) {
+        if (!confirm('Удалить анкету #' + id + '?')) return;
+        try {
+          const res = await fetch('/api/leads/' + id, { method: 'DELETE' });
+          if (res.ok) {
+            load();
+            const toast = document.createElement('div');
+            toast.className = 'toast';
+            toast.textContent = 'Анкета #' + id + ' удалена';
+            document.body.appendChild(toast);
+            setTimeout(() => toast.remove(), 2000);
+          }
+        } catch {}
+      }
+
+      load();
+    </script>
+  </body>
+</html>
