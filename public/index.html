@@ -35,7 +35,7 @@
               <h4>Получите бесплатный экспертный подбор и скидку<br>10% на первый заказ прямо сейчас!</h4>
               <form class="lead-form" data-source="header">
               <label for="vin_or_model">
-                <span>МОДЕЛЬ АВТО ИЛИ VIN-КОД</span>
+                <span><h5>МОДЕЛЬ АВТО ИЛИ VIN-КОД</h5></span>
                 <input
                   type="text"
                   name="vin_or_model"
@@ -44,7 +44,7 @@
                 />
               </label>
               <label for="phone">
-                <span>НОМЕР ТЕЛЕФОНА</span>
+                <span><h5>НОМЕР ТЕЛЕФОНА</h5></span>
                 <input
                   type="tel"
                   name="phone"
@@ -54,11 +54,11 @@
                 />
               </label>
               <button type="submit">
-                <span class="btn-label">ПОЛУЧИТЬ ПОДБОР И СКИДКУ</span>
+                <span class="btn-label"><h3>ПОЛУЧИТЬ ПОДБОР И СКИДКУ</h3></span>
               </button>
               <span class="form-agreement"
-                >НАЖИМАЯ КНОПКУ, ВЫ СОГЛАШАЕТЕСЬ С ПОЛИТИКОЙ КОНФИДЕНЦИАЛЬНОСТИ И УСЛОВИЯМИ
-                ОБРАБОТКИ ДАННЫХ.</span>
+                ><h5>НАЖИМАЯ КНОПКУ, ВЫ СОГЛАШАЕТЕСЬ С ПОЛИТИКОЙ КОНФИДЕНЦИАЛЬНОСТИ И УСЛОВИЯМИ
+                ОБРАБОТКИ ДАННЫХ.</h5></span>
             </form>
           </article>
         </main>
@@ -94,11 +94,11 @@
       <div id="text-block-input-panel"><h1>ЗАПРОС НА ПОДБОР</h1><h4>Получите профессиональный подбор<br>запчастей по <span style="font-weight: 700;">VIN и скидку 10%</span> на заказ в<br>течение 15 минут.</h4></div>
       <form class="lead-form" data-source="large" id="large-input-block">
               <label for="large-name">
-                <span>ВАШЕ ИМЯ</span>
+                <span> <h5>ВАШЕ ИМЯ</h5></span>
                 <input type="text" name="name" id="large-name" placeholder="Александр" />
               </label>
               <label for="large-phone">
-                <span>НОМЕР ТЕЛЕФОНА</span>
+                <span><h5>НОМЕР ТЕЛЕФОНА</h5></span>
                 <input
                   type="tel"
                   name="phone"
@@ -108,10 +108,10 @@
                 />
               </label>
               <label for="large-vin">
-                <span>VIN ИЛИ МОДЕЛЬ</span>
+                <span><h5>VIN ИЛИ МОДЕЛЬ</h5></span>
                 <input type="text" name="vin_or_model" id="large-vin" placeholder="BMW M5 F90" />
               </label>
-              <button type="submit"><span class="btn-label">ПОЛУЧИТЬ СКИДКУ</span></button>
+              <button type="submit" id="large-input-button"><span class="btn-label"> <h2>ПОЛУЧИТЬ СКИДКУ</h2></span></button>
             </form>
           </article>
     </section>
@@ -157,18 +157,28 @@
           <h2>Помощь эксперта</h2>
           <h6>Получите бесплатную консультацию<br>и скидку 5% на первый заказ</h6>
           </div>
-          <form>
-                <h4>VIN-НОМЕР АВТОМОБИЛЯ</h4>
-                <input type="text" placeholder="Введите VIN">
-              </form>
-              <form>
-                <h4>НОМЕР ТЕЛЕФОНА</h4>
-                <input type="text" placeholder="+7 (___) ___-__-__">
-              </form>
-              <div id="input-button-mobile">
-              <button><h4>ПОЛУЧИТЬ СКИДКУ</h4></button>
-              <h5>Нажимая кнопку, вы соглашаетесь с обработкой<br>персональных данных</h5>
-              </div>
+         <form class="lead-form" data-source="mobile">
+            <label for="mobile-vin">
+              <span><h4>VIN-НОМЕР АВТОМОБИЛЯ</h4></span>
+              <input type="text" name="vin_or_model" id="mobile-vin" placeholder="Введите VIN" />
+            </label>
+            <label for="mobile-phone">
+              <span><h4>НОМЕР ТЕЛЕФОНА</h4></span>
+              <input
+                type="tel"
+                name="phone"
+                id="mobile-phone"
+                placeholder="+7 (___) ___-__-__"
+                required
+              />
+            </label>
+            <div id="input-button-mobile">
+              <button type="submit" id="input-panel-mobile-button"><span class="btn-label"><h4>ПОЛУЧИТЬ СКИДКУ</h4></span></button>
+              <span class="form-agreement"
+                ><h5>Нажимая кнопку, вы соглашаетесь с обработкой <br>персональных данных</h5></span
+              >
+            </div>
+          </form>
          </section>
          <section id="component-catalog-mobile">
           <h1>Каталог</h1>

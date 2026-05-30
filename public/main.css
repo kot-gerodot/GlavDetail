@@ -230,6 +230,10 @@ margin: 0;
 }
 #input-panel form{
     text-align:left;
+    display: flex;
+    flex-direction: column;
+    height: 309px;
+    justify-content: space-around;
 }
 
 #input-panel input{
@@ -258,7 +262,7 @@ background: #FB2C1A;
 border: 0;
 color:#ffffff;
 }
-#input-panel div{
+.form-agreement h5{
   text-align:center;
 }
 /*component-catalog.......*/
@@ -418,15 +422,16 @@ width: 692px;
 height: 90px;
 justify-content: space-between;
 }
-#large-input-block form{
+#large-input-block label{
     margin: 0;
 }
-#large-input-block form h5{
+#large-input-block label h5{
 font-weight: 700;
 color: rgba(100, 116, 139, 1);
+margin: 10px 0;
 
 }
-#large-input-block form input {
+#large-input-block label input {
 width: 155px;
 height: 50px;
 border-width: 1px, 1px, 2px, 1px;
@@ -437,12 +442,12 @@ font-weight: 500;
 font-size: 16px;
 color: rgba(100, 116, 139, 1);
 }
-#large-input-block form input::placeholder {
+#large-input-block label input::placeholder {
        color: rgba(107, 114, 128, 1);
     
       }
 
-#large-input-block button{
+#large-input-button{
      display: flex;
     width: 155px;
     height: 48px;

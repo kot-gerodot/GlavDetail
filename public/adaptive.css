@@ -143,13 +143,13 @@ border: 0;
  margin: 20px 0;
  display: flex;
  flex-direction: column;
- justify-content: space-around;
 height: 433px;
 border-radius: 12px;
 background-color:#ffffff;
 border: 2px solid rgba(0, 91, 175, 0.1);
 
 padding:24px;
+justify-content: space-between;
 
 
      }
@@ -162,8 +162,11 @@ padding:24px;
         color: rgba(0, 136, 255, 1);
       }
       #input-panel-mobile form{
-height: 95px;
+height: 324px;
 margin: 0;
+display: flex;
+flex-direction: column;
+justify-content: space-between;
 
       }
        #input-panel-mobile form h4{
@@ -200,6 +203,7 @@ justify-content: center;
  background:rgba(0, 136, 255, 1);
 border-radius: 8px;
 border: 0;
+height: 56px;
 
       }
       #input-button-mobile button{
