@@ -14,18 +14,28 @@
            <figure>
                     <img src="./image/logo.svg" alt="">
            </figure>
-           <button>
+           <button onclick="
+    document.getElementById('main-desktop').scrollIntoView({ behavior: 'smooth' });
+    setTimeout(() => {
+        document.getElementById('vin_or_model').focus();
+    }, 300);
+  ">
             <h3>ОФОРМИТЬ ЗАКАЗ</h3>
            </button>
         </nav>
-        <main>
+        <main id="main-desktop">
           <article id="seasonal-sale">
             <div>
             <h4>ОГРАНИЧЕННОЕ ПРЕДЛОЖЕНИЕ</h4>
             </div>
             <h1>Сезонная Распродажа</h1>
             <h2>Оригинальные запчасти со скидкой 15%.<br>Высокоточные компоненты для максимальной<br>надежности и пиковой производительности<br>вашего автомобиля.</h2>
-            <button>
+            <button onclick="
+    document.getElementById('main-desktop').scrollIntoView({ behavior: 'smooth' });
+    setTimeout(() => {
+        document.getElementById('vin_or_model').focus();
+    }, 300);
+  ">
             <h3>ПЕРЕЙТИ В КАТАЛОГ</h3>
             </button>
           </article>
@@ -85,9 +95,24 @@
 
 
     <section id="information-block">
-      <article id="oil-background"><div class="information-header"><h6>Масла Genesis</h6></div><div class="information"><h6>Премиальная смазка для<br>экстремальных нагрузок и<br>долголетия двигателя.</h6></div><button><h6>ПОДРОБНЕЕ</h6></button></article>
-       <article id="tire-background"><div class="information-header"><h6>Зимние Шины</h6></div><div class="information"><h6>Бескомпромиссное сцепление в<br>самых суровых условиях.<br>Безопасность на скорости.</h6></div><button><h6>ПОДРОБНЕЕ</h6></button></article>
-        <article id="candles-background"><div class="information-header"><h6>Запчасти ТО</h6></div><div class="information"><h6>Готовые комплекты для<br>регламентного обслуживания<br>вашего авто.</h6></div><button><h6>ПОДРОБНЕЕ</h6></button></article>
+      <article id="oil-background"><div class="information-header"><h6>Масла Genesis</h6></div><div class="information"><h6>Премиальная смазка для<br>экстремальных нагрузок и<br>долголетия двигателя.</h6></div><button onclick="
+    document.getElementById('large-input-panel').scrollIntoView({ behavior: 'smooth' });
+    setTimeout(() => {
+        document.getElementById('large-name').focus();
+    }, 300);
+  "><h6>ПОДРОБНЕЕ</h6></button></article>
+       <article id="tire-background"><div class="information-header"><h6>Зимние Шины</h6></div><div class="information"><h6>Бескомпромиссное сцепление в<br>самых суровых условиях.<br>Безопасность на скорости.</h6></div><button  onclick="
+    document.getElementById('large-input-panel').scrollIntoView({ behavior: 'smooth' });
+    setTimeout(() => {
+        document.getElementById('large-name').focus();
+    }, 300);
+  "><h6>ПОДРОБНЕЕ</h6></button></article>
+        <article id="candles-background"><div class="information-header"><h6>Запчасти ТО</h6></div><div class="information"><h6>Готовые комплекты для<br>регламентного обслуживания<br>вашего авто.</h6></div><button  onclick="
+    document.getElementById('large-input-panel').scrollIntoView({ behavior: 'smooth' });
+    setTimeout(() => {
+        document.getElementById('large-name').focus();
+    }, 300);
+  "><h6>ПОДРОБНЕЕ</h6></button></article>
     </section>
     <section id="large-input-panel">
       <article>
@@ -143,12 +168,18 @@
            </figure>
         </nav>
 
-        <main>
+        <main id="main-mobile">
           <section id="seasonal-sale-mobile">
           <div><h5>СЕЗОННАЯ АКЦИЯ</h5></div>
           <h1>Сезонная<br>распродажа</h1>
           <h3>Оригинальные запчасти со скидкой<br>15% для всех зарегистрированных<br>пользователей в этом месяце.</h3>
-          <button><h4>Получить подбор и скидку</h4></button>
+          <button
+          onclick="
+    document.getElementById('input-panel-mobile').scrollIntoView({ behavior: 'smooth' });
+    setTimeout(() => {
+        document.getElementById('mobile-vin').focus();
+    }, 300);
+  "><h4>Получить подбор и скидку</h4></button>
           </section>
         </main>
         <div id="container"> 
@@ -190,9 +221,24 @@
              </div> 
          </section>
          <section id="information-block-mobile">
-            <article id="oil-mobile"><div class="information-header"><h2>Масла Genesis</h2></div><div class="information"><h4>Максимальная защита двигателя</h4></div><button id="buy-button"><h6>КУПИТЬ</h6></button></article>
-            <article id="tire-mobile"><div class="information-header"><h2>Зимние Шины</h2></div><div class="information"><h4>Сцепление в любых условиях</h4></div><button id="study-button"><h6>ИЗУЧИТЬ</h6></button></article>
-             <article id="candles-mobile"><div class="information-header"><h2>Запчасти для ТО</h2></div><div class="information"><h4>Готовые комплекты</h4></div><button id="list-button"><h6>СПИСОК</h6></button></article>
+            <article id="oil-mobile"><div class="information-header"><h2>Масла Genesis</h2></div><div class="information"><h4>Максимальная защита двигателя</h4></div><button id="buy-button" onclick="
+    document.getElementById('input-panel-mobile').scrollIntoView({ behavior: 'smooth' });
+    setTimeout(() => {
+        document.getElementById('mobile-vin').focus();
+    }, 300);
+  "><h6>КУПИТЬ</h6></button></article>
+            <article id="tire-mobile"><div class="information-header"><h2>Зимние Шины</h2></div><div class="information"><h4>Сцепление в любых условиях</h4></div><button id="study-button" onclick="
+    document.getElementById('input-panel-mobile').scrollIntoView({ behavior: 'smooth' });
+    setTimeout(() => {
+        document.getElementById('mobile-vin').focus();
+    }, 300);
+  "><h6>ИЗУЧИТЬ</h6></button></article>
+             <article id="candles-mobile"><div class="information-header"><h2>Запчасти для ТО</h2></div><div class="information"><h4>Готовые комплекты</h4></div><button id="list-button" onclick="
+    document.getElementById('input-panel-mobile').scrollIntoView({ behavior: 'smooth' });
+    setTimeout(() => {
+        document.getElementById('mobile-vin').focus();
+    }, 300);
+  "><h6>СПИСОК</h6></button></article>
          </section>
 
      </div>
